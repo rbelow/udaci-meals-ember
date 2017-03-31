@@ -1,0 +1,10 @@
+<h4>{{model.name}}</h4>
+<img src="/img/{{model.image}}" alt="{{model.name}}">
+<p>3.9</p>
+<p>A savory slice of ham topped with a wedge of goat cheese, all on a buttery, flaky croissant.</p>
+<p>
+  <!-- <a href="/item/{{model.id}}/nutrition">Nutrition Facts</a> -->
+  {{#link-to 'item.nutrition'}}Nutrition{{/link-to}}
+</p>
+
+{{outlet}}
