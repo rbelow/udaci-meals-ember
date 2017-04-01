@@ -7,8 +7,15 @@ li {
     padding: 1rem;
 }
 
-h4 {}
-
 img {
     max-width: 320px;
+}
+
+.order-tracker div {
+  padding: 1rem;
+}
+
+dt {
+  float: left;
+  padding-right: 1rem;
 }
