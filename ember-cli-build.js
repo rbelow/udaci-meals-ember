@@ -6,7 +6,7 @@ module.exports = function(defaults) {
     // Add options here
     // NOTE Update references on build process
     fingerprint: {
-        replaceExtensions: ['html', 'css', 'js']
+        replaceExtensions: ['html', 'hbs', 'css', 'js']
     }
   });
 
