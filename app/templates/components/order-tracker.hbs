@@ -1,19 +1,36 @@
 <div class="order-tracker">
   <div>
-    Select food for {{orderManager.selectedDay}}!
+    <h2>Select food for {{orderManager.selectedDay}}!</h2>
   </div>
+  <hr>
   {{#each-in orderManager.menuSelection as |day menuOrder|}}
-  <div>
-    {{day}}
+  <div {{action 'setDayTo' day}}>
+    <p class="day">{{day}}</p>
     <dl>
-      <dt>Breackfast</dt>
-      <dd>{{menuOrder.breakfast}}</dd>
-      <dt>Lunch</dt>
-      <dd>{{menuOrder.lunch}}</dd>
-      <dt>Dinner</dt>
-      <dd>{{menuOrder.dinner}}</dd>
+      <dt><em>Breackfast</em></dt>
+      <dd>
+        {{#if menuOrder.breakfast}}
+          {{menuOrder.breakfast}} <span class="remove-item" {{action 'remove' day 'breakfast'}}>
+            &#10006;</span>
+        {{/if}}
+      </dd>
+      <dt><em>Lunch</em></dt>
+      <dd>
+        {{#if menuOrder.lunch}}
+        {{menuOrder.lunch}} <span class="remove-item" {{action 'remove' day 'lunch'}}>
+          &#10006;</span>
+          {{/if}}
+      </dd>
+      <dt><em>Dinner</em></dt>
+      <dd>
+        {{#if menuOrder.dinner}}
+        {{menuOrder.dinner}} <span class="remove-item" {{action 'remove' day 'dinner'}}>
+          &#10006;</span>
+          {{/if}}
+      </dd>
     </dl>
   </div>
+  <hr>
   {{/each-in}}
 </div>
 

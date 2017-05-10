@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'udaci-meals',
+    modulePrefix: 'udaci-meals-ember',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
