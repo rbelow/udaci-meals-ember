@@ -38,7 +38,10 @@
     "loader.js": "^4.2.3"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
